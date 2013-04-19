@@ -1,0 +1,43 @@
+\begin{center}
+\LARGE \textbf{Modelling of electrokinetic flow\\ using the
+  lattice-Boltzmann method} \normalsize
+
+\vspace{10pt}
+\line(1,0){100}\\
+\vspace{16pt}
+\large Andreas Bülling and Alexei Heintz
+\end{center}
+
+\vspace{10pt}
+
+\begin{abstract}
+\todo{Update abstract!}
+The lattice-Boltzmann method is used to model flow in electrokinetic
+systems. A modelling approach based on the coupling of Navier-Stokes,
+Nernst-Planck and Poisson's equation of electrostatics is
+utilised. Three lattice-Boltzmann methods are formulated for the three
+equations respectively.
+
+The method is implemented in \texttt{C++} with the aim of being high
+performing. Topics as locality, instruction pipelines and parallel
+computing are considered. The implementation is tested for a number of
+classic examples with known solutions, e.g.  Taylor-Green vortex flow,
+an Helmholtz equation and an advection-diffusion situation. The
+computed solutions agree well with the analytic solutions.
+
+The physical systems modelled consists mainly of various charged
+channel flows of ionic solutions. Electrokinetic effects, such as
+electroosmosis and the electrovicous effect are studied. This is done
+in thin channels where the thickness of the electrical double layers
+is comparable to the channel dimension. The electroviscous effect is
+shown to slow the flow down and a local minimum is found in the
+velocity profile for thick enough double layers. Other more
+complicated systems are also studied; electroosmotic flow in a channel
+with heterogeneously charged walls and flow in a an array of charged
+squares.
+\end{abstract}
+
+\noindent \textbf{Keywords:} lattice-Boltzmann, electrokinetics,
+electrohydrodynamics, Nernst-Planck, Poisson-Boltzmann,
+high performance computing.
+
