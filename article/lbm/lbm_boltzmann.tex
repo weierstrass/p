@@ -1,0 +1,90 @@
+\section{Statistical background}\label{sec:lbm:stat}
+Consider one litre of air. At STP, the volume will contain in the
+order of $10^{22}$ molecules. In order to model this system
+microscopically, 6 variables per molecule will be needed to describe
+the microstate of the system. Just to store the state of the system in
+a computer would require more space than the estimated size of the
+whole world wide web times one million \cite{wolfram-alpha-web}. Thus,
+for these kind of systems, the microscopic approach is somewhat
+impractical.
+
+\nomenclature{STP}{Standard Temperature and Pressure}
+
+Statistical approaches have been developed for these types of
+problems. A fundamental quantity used for describing the system is a
+continuous probability density distribution, $f$. This distribution
+may be regarded as an average over the microstates. Consider a volume
+of $d^3\x d^3\mathbf{p}$ in phase space, the number of molecules, $dN$
+in this volume is then given through the density distribution, $f$ as
+
+\begin{equation}
+dN(\x, \p, t) = f(\x, \p, t)\drm^3\x \drm^3\p.
+\end{equation}
+Thus $f(\x, \p, t)$ is a measure of the number of particles at
+location $\x$ with momentum $\p$ and at time $t$. Macroscopic variables are
+obtained by summing, e.g. the particle density, $n$, is obtained from
+
+\begin{equation}
+n(\x, t) = \int f(\x, \p, t) \drm^3\p
+\end{equation}
+and the macroscopic momentum density of the system is determined by
+
+\begin{equation}
+\rho(\x, t) \ubf(\x, t) = \int \p f(\x, \p, t) \drm^3\p
+\end{equation}
+where $\rho = m n$ is the mass density. Multiplying $f$ by a power $k$ of
+$\p$ or $\mathbf{v} = \p/m$ and integrating is often referred to as
+taking the $k$:th moment of $f$ and is a term that will be used
+throughout this chapter.
+
+In the late 19th century, Boltzmann developed a model for the time
+evolution of $f$. To do this he had to make several
+assumptions. First, only collisions between two particles are
+considered, this makes the equation mostly applicable to dilute
+gases. Second, the two particles colliding are assumed to be
+uncorrelated before the collision. Third, external forces are assumed
+not to affect the collisions \cite{wolf-gladrow}. The equation is
+named after its father to the Boltzmann (transport) equation and
+reads:
+
+\begin{equation}\label{eq:lbm:boltzmann-eq}
+\partial_t f + \frac{\p}{m} \cdot \nabla_{\x}f + \frac{\F}{m} \cdot
+\nabla_{\mathbf{v}}f = Q(f, f)
+\end{equation}
+where $f$ is the distribution function for a single species collection
+of particles of mass $m$, $\F$ is external forces, $\p$ is momentum,
+$\nabla_{\x}$ and $\nabla_{\mathbf{v}}$ are the gradients in location
+and velocity space respectively. The right-hand side contains the so
+called collision term which in the general case is expressed as an
+integral. This integral states how the distribution function changes
+after a two particle collision. However, the structure of this
+integral is in most physical situations too complicated to be used
+directly. Therefore, a number of simplifications have been proposed
+during the years.
+
+When designing these approximations, at least two main properties of
+the collision integral must be kept. \cite{wolf-gladrow}
+
+\begin{enumerate}
+  \item The same quantities that are conserved under collisions in the
+    collsion integral must also be conserved in the approximation.
+  \item Boltzmann's H-theorem must be fulfilled for the
+    approximated collision operator.
+\end{enumerate}
+
+Without being to specific, the H-theorem states that the entropy
+computed from $f$ is always increasing with time and that the maximum
+entropy is obtained for a so called Maxwellian distribution in
+momentum/velocity space. Boltzmann used an other quantity denoted by H
+closely related to entropy, thus the name of the theorem. The
+Maxwellian distribution in two dimensions that $f$ tends towards is
+given by
+
+\begin{equation}\label{eq:lbm:maxwell}
+f^{(M)}(\x, \mathbf{v}, t) = n \left ( \frac{m}{2 \pi k_B T} \right )
+\exp{\left( -\frac{m}{2 k_B T} (\mathbf{v} - \ubf)^2\right)}
+\end{equation} 
+where $\ubf(\x, t)$ is the mean velocity of the particles in the system and
+$n(\x, t)$ is the number of particles at location $\x$. In section
+\ref{sec:lbm:col}, one of the most widely used approximations of the
+collision integral will be presented.
