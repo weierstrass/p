@@ -1,0 +1,39 @@
+\subsection{Boundary conditions}
+For Poisson's equation, at the charged boundaries, most physical
+situations may be covered by either specifying the potential or the
+surface charge density. The former would be a Dirichlet boundary
+condition
+
+\begin{equation}
+\psirm(\x) = \zeta(\x)\;,\;\; \x \in \Gamma
+\end{equation}
+and the latter a Neumann condition 
+
+\begin{equation}\label{eq:et:fix_c}
+\nabla\psirm(\x) \cdot \n =
+-\frac{\sigma(\x)}{\epsilon_0\epsilon_r}\;,\;\; \x \in \Gamma
+\end{equation}
+where $\Gamma$ denotes the boundary of the domain and $\n$ is the
+normal to the boundary surface.\- \cite{hlushkou} In this paper,
+simulations are performed with a fixed surface charge.
+
+At hard boundaries (walls), the charge flux through the boundary is
+set to zero, i.e.
+
+\begin{equation}\label{eq:et:j0}
+\J \cdot \mathbf{n} = 0 \;,\;\; \x \in \Gamma
+\end{equation}
+where $\mathbf{n}$ denotes the normal to the surface and $\Gamma$ is
+the boundary of the domain.
+
+The boundary condition of the velocity field is chosen as a friction
+condition, i.e.
+
+\begin{equation}
+\ubf = 0 \;,\;\; \x \in \Gamma
+\end{equation} 
+
+At wet boundaries, inlets and outlets, of the domain various boundary
+conditions may be set. For instance the pressure or the velocity could
+be fixed. In the case of a fixed pressure boundary, a flow direction
+must also be specified for completeness. \cite{he_zou}

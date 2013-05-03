@@ -59,25 +59,3 @@ and
 \end{equation}
 where $\Prm$ is the pressure, $\mu$ the kinematic viscosity and $\F$
 is the contributions from  external forces.
-
-\subsubsection{Boundary conditions}
-
-At hard boundaries (walls), the boundary conditions to
-eqs. \eqref{eq:et:ns_incompressible} and \eqref{eq:et:ns_mom} are set
-on the velocity of either a Dirichlet or Neumann type. In most
-physical situations the Dirichlet condition is used which corresponds
-to that there is a friction between the fluid and the wall, usually
-full friction, i.e. when no relative movement between fluid and wall
-is present and the velocity at the wall boundary is set to zero, i.e.
-
-\begin{equation}
-\ubf = 0 \;,\;\; \x \in \Gamma
-\end{equation} 
-where $\Gamma$ denotes the boundary. The Neumann type conditions are
-used for no-friction walls where the normal component of the
-derivative of the velocity is specified, usually to zero.
-
-At wet boundaries, inlets and outlets, of the domain various boundary
-conditions may be set. For instance the pressure or the velocity could
-be fixed. In the case of a fixed pressure boundary, a flow direction
-must also be specified for completeness. \cite{he_zou}
